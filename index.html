@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>Agenda de contactos</title>
   </head>
-  <body>
+  <body class="d-flex flex-column vh-100">
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -45,7 +45,7 @@
         </div>
       </nav>
     </header>
-    <main class="container my-4">
+    <main class="container my-4 flex-grow-1">
       <div class="d-flex align-items-center justify-content-between">
         <h1>Lista Contactos</h1>
         <button
@@ -77,7 +77,9 @@
               <td>elena.rodriguez@email.com</td>
               <td>555-123-4567</td>
               <td>
-                <a class="btn btn-primary" href="./pages/detalleContacto.html">Ver mas</a>
+                <a class="btn btn-primary" href="./pages/detalleContacto.html"
+                  >Ver mas</a
+                >
                 <button class="btn btn-warning">Editar</button>
                 <button class="btn btn-danger">Borrar</button>
               </td>
@@ -112,7 +114,10 @@
                   type="text"
                   id="nombre"
                   class="form-control"
-                  placeholder="Ej: Juan perez"
+                  placeholder="Ej: Juan"
+                  minlength="3"
+                  maxlength="40"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -121,25 +126,34 @@
                   type="text"
                   id="apellido"
                   class="form-control"
-                  placeholder="Ej: Juan perez"
+                  placeholder="Ej: perez"
+                  min="3"
+                  max="40"
+                  required
                 />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input
-                  type="text"
+                  type="email"
                   id="email"
                   class="form-control"
-                  placeholder="Ej: Juan perez"
+                  placeholder="Ej: Juanperez@gmail.com"
+                  minlength="3"
+                  maxlength="320"
+                  required
                 />
               </div>
               <div class="mb-3">
                 <label for="telefono" class="form-label">Telefono</label>
                 <input
-                  type="text"
+                  type="tel"
                   id="telefono"
                   class="form-control"
-                  placeholder="Ej: Juan perez"
+                  placeholder="Ej: 3815670288"
+                  min="1111111111"
+                  max="9999999999"
+                  required
                 />
               </div>
               <button class="btn btn-primary" type="submit">Agregar</button>
